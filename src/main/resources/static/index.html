@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crave — Food, Made Beautiful</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+    <aside class="sidebar">
+        <a href="#" class="brand">
+            <span class="brand-icon">c.</span>
+            <span>crave<span class="brand-dot">.</span></span>
+        </a>
+
+        <div class="sidebar-label">MENU</div>
+
+        <nav class="navigation">
+            <button class="nav-item active" data-page="home">
+                <span class="nav-icon">⌂</span>
+                <span>Discover</span>
+            </button>
+            <button class="nav-item" data-page="menu">
+                <span class="nav-icon">▤</span>
+                <span>Explore menu</span>
+            </button>
+            <button class="nav-item" data-page="orders">
+                <span class="nav-icon">◷</span>
+                <span>My orders</span>
+            </button>
+        </nav>
+
+        <div class="sidebar-label second-label">YOUR ACCOUNT</div>
+
+        <nav class="navigation">
+            <button class="nav-item" data-page="cart">
+                <span class="nav-icon">🛒</span>
+                <span>My cart</span>
+                <span class="nav-count" id="sidebar-cart-count">0</span>
+            </button>
+            <button class="nav-item" data-page="profile">
+                <span class="nav-icon">♙</span>
+                <span>My profile</span>
+            </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="offer-card">
+                <span class="offer-spark">✳</span>
+                <h3>Good food.<br>Better mood.</h3>
+                <p>Your next favourite meal is waiting.</p>
+                <button id="offer-explore">Explore food <span>↗</span></button>
+            </div>
+
+            <div class="user-profile">
+                <div class="avatar">G</div>
+                <div class="user-info">
+                    <strong>Guest User</strong>
+                    <span>Food enthusiast</span>
+                </div>
+                <span class="profile-menu">···</span>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div class="breadcrumb">
+                <span>Pages</span>
+                <span class="crumb-slash">/</span>
+                <strong id="breadcrumb-current">Discover</strong>
+            </div>
+
+            <div class="topbar-actions">
+                <div class="location-pill">
+                    <span class="location-icon">⌖</span>
+                    <div>
+                        <small>Delivering to</small>
+                        <strong>Choose your location</strong>
+                    </div>
+                    <span>⌄</span>
+                </div>
+                <button class="icon-button" id="header-cart" aria-label="Open cart">
+                    ♧
+                    <span class="notification-dot"></span>
+                </button>
+            </div>
+        </header>
+
+        <section class="welcome-section">
+            <div>
+                <div class="eyebrow"><span></span> YOUR DAILY DOSE OF DELICIOUS</div>
+                <h1 id="page-title">Good food, <span>great mood.</span></h1>
+                <p id="page-subtitle">Find your next favourite meal, freshly made just for you.</p>
+            </div>
+            <div class="date-chip"><span>✦</span> Made with love, served with flavour</div>
+        </section>
+
+        <section class="hero-banner">
+            <div class="hero-content">
+                <div class="hero-tag"><span>✦</span> THE WEEKEND SPECIAL</div>
+                <h2>A little bite<br>of <span>happiness.</span></h2>
+                <p>Big flavours. Fresh ingredients.<br>Made to make your day.</p>
+                <button class="hero-button" id="hero-explore">
+                    Explore the menu <span>→</span>
+                </button>
+                <div class="hero-dots">
+                    <span class="dot active-dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <div class="hero-art">
+                <div class="hero-glow"></div>
+                <div class="hero-food-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=850&q=85"
+                        alt="Fresh gourmet burger"
+                    >
+                </div>
+                <div class="floating-rating">
+                    <span class="rating-star">★</span>
+                    <div><strong>4.9/5</strong><small>Loved by foodies</small></div>
+                </div>
+                <div class="floating-price"><small>Starting at</small><strong>₹149</strong></div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">MADE FOR YOUR CRAVINGS</span>
+                    <h2>What sounds good?</h2>
+                </div>
+                <button class="text-link" id="view-all">View all <span>↗</span></button>
+            </div>
+
+            <div class="category-list" id="category-list">
+                <button class="category-chip active" data-category="All">
+                    <span>✳</span> All items
+                </button>
+                <button class="category-chip" data-category="Burgers">
+                    <span>🍔</span> Burgers
+                </button>
+                <button class="category-chip" data-category="Pizza">
+                    <span>🍕</span> Pizza
+                </button>
+                <button class="category-chip" data-category="Pasta">
+                    <span>🍝</span> Pasta
+                </button>
+                <button class="category-chip" data-category="Snacks">
+                    <span>🥪</span> Snacks
+                </button>
+                <button class="category-chip" data-category="Drinks">
+                    <span>🥤</span> Drinks
+                </button>
+                <button class="category-chip" data-category="Desserts">
+                    <span>🍰</span> Desserts
+                </button>
+            </div>
+        </section>
+
+        <section class="food-section" id="food-section">
+            <div class="section-heading food-heading">
+                <div>
+                    <span class="section-kicker">HANDPICKED FOR YOU</span>
+                    <h2>Popular right now <span class="heading-spark">✳</span></h2>
+                </div>
+                <div class="search-box">
+                    <span>⌕</span>
+                    <input type="search" id="food-search" placeholder="Find something delicious...">
+                    <kbd>/</kbd>
+                </div>
+            </div>
+
+            <div class="food-grid" id="food-grid"></div>
+
+            <div class="empty-state hidden" id="empty-state">
+                <span>🍽️</span>
+                <h3>No bites found!</h3>
+                <p>Try another search or explore a different category.</p>
+                <button class="primary-button" id="reset-filters">Show all food</button>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <span>© 2026 Crave. Made for people who love food.</span>
+            <span>Fresh flavours, happy hearts. <b>♥</b></span>
+        </footer>
+
+    </main>
+</div>
+
+<div class="toast" id="toast">
+    <span>✓</span>
+    <p id="toast-message">Added to your cart</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
